@@ -31,7 +31,7 @@ services:
     image: kranthikumar96/mysql:v1
     container_name: mysql
   shipping:
-    image: kranthikumar/shipping:v1
+    image: kranthikumar96/shipping:v1
     container_name: shipping
     depends_on:
     - mysql
