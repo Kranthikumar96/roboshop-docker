@@ -6,8 +6,8 @@ networks:
 volumes:
   mongodb:
   redis:
-  mysql:
-  rabbitmq: # docker volume create rabbitmq
+  # mysql:
+  # rabbitmq: # docker volume create rabbitmq
 services:
   mongodb:
     image: kranthikumar96/mongodb:v1
