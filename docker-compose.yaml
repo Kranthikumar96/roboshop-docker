@@ -20,7 +20,7 @@ services:
     depends_on: 
     - mongodb
   redis:
-    image: kranthikumar96/redis:v1
+    image: redis:7.0
     container_name: redis
     volumes:
     - redis:/data
