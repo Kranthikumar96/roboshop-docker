@@ -6,7 +6,7 @@ networks:
 volumes:
   mongodb:
   redis:
-  # mysql:
+  mysql:
   # rabbitmq: # docker volume create rabbitmq
 services:
   mongodb:
