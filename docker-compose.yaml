@@ -36,11 +36,11 @@ services:
     depends_on:
     - catalogue
     - redis
-  # mysql:
-  #   image: kranthikumar96/mysql:v1
-  #   container_name: mysql
-  #   volumes:
-  #   - mysql:/var/lib/mysql
+  mysql:
+    image: kranthikumar96/mysql:v1
+    container_name: mysql
+    volumes:
+    - mysql:/var/lib/mysql
   # shipping:
   #   image: kranthikumar96/shipping:v1
   #   container_name: shipping
