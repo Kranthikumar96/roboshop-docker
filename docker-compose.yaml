@@ -7,7 +7,7 @@ volumes:
   mongodb:
   redis:
   mysql:
-  # rabbitmq: # docker volume create rabbitmq
+  rabbitmq: # docker volume create rabbitmq
 services:
   mongodb:
     image: kranthikumar96/mongodb:v1
@@ -47,14 +47,14 @@ services:
     depends_on:
     - mysql
     - cart
-  # rabbitmq:
-  #   image: rabbitmq:3
-  #   container_name: rabbitmq
-  #   environment:
-  #     RABBITMQ_DEFAULT_USER: roboshop
-  #     RABBITMQ_DEFAULT_PASS: roboshop123
-  #   volumes:
-  #   - rabbitmq:/var/lib/rabbitmq
+  rabbitmq:
+    image: rabbitmq:3
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: roboshop
+      RABBITMQ_DEFAULT_PASS: roboshop123
+    volumes:
+    - rabbitmq:/var/lib/rabbitmq
   # payment:
   #   image: kranthikumar96/payment:v1
   #   container_name: payment
