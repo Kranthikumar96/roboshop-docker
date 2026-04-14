@@ -41,12 +41,12 @@ services:
     container_name: mysql
     volumes:
     - mysql:/var/lib/mysql
-  # shipping:
-  #   image: kranthikumar96/shipping:v1
-  #   container_name: shipping
-  #   depends_on:
-  #   - mysql
-  #   - cart
+  shipping:
+    image: kranthikumar96/shipping:v1
+    container_name: shipping
+    depends_on:
+    - mysql
+    - cart
   # rabbitmq:
   #   image: rabbitmq:3
   #   container_name: rabbitmq
