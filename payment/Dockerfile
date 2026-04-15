@@ -6,6 +6,7 @@ RUN apk add --no-cache python3-dev build-base linux-headers pcre-dev
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir --prefix=/install -r requirements.txt
 
+
 # Stage 2: Final image
 FROM python:3.9.23-alpine3.22
 EXPOSE 8080
@@ -22,6 +23,8 @@ COPY --chown=roboshop:roboshop payment.ini .
 COPY --chown=roboshop:roboshop *.py .
 CMD ["uwsgi", "--ini", "payment.ini"]
 
+
+#CMD ["sleep", "1000"]
 # FROM python:3.9
 # EXPOSE 8080
 # WORKDIR /opt/server
